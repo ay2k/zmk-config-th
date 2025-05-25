@@ -8,6 +8,8 @@
 #define DEFAULT_MAC 1
 #define SCROLL 2
 
+
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 100  //スクロール量変更
 / {
     /* Behaviors */
     // スクロール設定
@@ -36,9 +38,9 @@
         scroll_move_y: sensor_rotate_msc_for_move_y {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
-            bindings = <&msc MOVE_Y(40)>, <&msc MOVE_Y(-40)>;
+            bindings = <&msc MOVE_Y(20)>, <&msc MOVE_Y(-20)>;
             // tap-ms下限メモ Yの値で可変: Y(15) <81>, Y(20) <65>, Y(25) <49>
-            tap-ms = <30>;
+            tap-ms = <65>;
         };
 
         // エンコーダー：マウススクロール(MOVE_X)
