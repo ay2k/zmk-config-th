@@ -8,7 +8,7 @@
 #define DEFAULT_MAC 1
 #define SCROLL 2
 
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 80  // スクロール量変更
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 80  // スクロール量最大値変更
 
 / {
     /* Behaviors */
@@ -35,6 +35,7 @@
         };
 
         // エンコーダー：マウススクロール(MOVE_Y)
+        // 1ノッチ分で画面の約半分スクロールに調整
         scroll_move_y: sensor_rotate_msc_for_move_y {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
