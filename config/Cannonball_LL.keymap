@@ -38,7 +38,7 @@
             #sensor-binding-cells = <0>;
             bindings = <&msc MOVE_Y(90)>, <&msc MOVE_Y(-90)>;
             // tap-ms下限メモ Yの値で可変: Y(15) <81>, Y(20) <65>, Y(25) <49>
-            tap-ms = <55>;
+            tap-ms = <35>;
         };
 
         // エンコーダー：マウススクロール(MOVE_X)
